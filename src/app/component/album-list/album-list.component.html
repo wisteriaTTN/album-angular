@@ -1,5 +1,12 @@
 <div class="album-list row">
-  <div class="col-md-4" *ngFor="let album of AlbumsList">
-    <app-album [album]="album"></app-album>
+  <div class="col-md-2 title">
+    <h3>List Album</h3>
+  </div>
+  <div class="col-md-10">
+    <div class="album-list row">
+      <div class="col-md-3" *ngFor="let album of AlbumsList">
+        <app-album [album]="album"></app-album>
+      </div>
+    </div>
   </div>
 </div>

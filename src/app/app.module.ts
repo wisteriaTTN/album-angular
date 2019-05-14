@@ -6,17 +6,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AlbumListComponent } from './component/album-list/album-list.component';
 import { AlbumComponent } from './component/album/album.component';
+import { AlbumDetailComponent } from './component/album-detail/album-detail.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlbumListComponent,
-    AlbumComponent
+    AlbumComponent,
+    AlbumDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
