@@ -1,8 +1,11 @@
 <div class="album-item">
-  <a [routerLink]="['/album-detail',album.id]">
-    <img class="img-fluid" [src]="album.photos[0].image">
-    <div class="album-title">
-      {{album.title}}
-    </div>
-  </a>
+  <div class="album-container">
+      <a [routerLink]="['/album-detail',album.id]">
+        <img class="img-fluid" [src]="album.photos[0].image">
+        <div class="album-title">
+          {{album.title}}
+        </div>
+      </a>
+  </div>
 </div>
+
