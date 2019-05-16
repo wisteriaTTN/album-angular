@@ -1,9 +1,11 @@
 export class Photo {
-  title: string;
-  image: string;
+  caption : string;
+  src: string;
+  thumb: string;
 
-  constructor(title: string, image: string) {
-    this.title = title;
-    this.image = image;
+  constructor(caption : string, src: string, thumb: string) {
+    this.caption  = caption;
+    this.src = src;
+    this.thumb = thumb;
   }
 }

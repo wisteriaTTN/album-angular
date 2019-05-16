@@ -5,9 +5,18 @@
   <div class="col-md-10">
     <div class="photo-list row">
       <div class="col-md-3">
+        <div class="photo-image">
+            <input #imageInput
+            type="file"
+            accept="image/*"
+            (change)="addPhoto(imageInput)">
+            <i class="fas fa-plus"></i>
+        </div>
       </div>
       <div class="col-md-3" *ngFor="let photo of album.photos; let i = index">
-        <img [src]="photo.image" class="img-fluid" (click)="open(i)">
+        <div class="photo-image">
+            <img [src]="photo.thumb" class="img-fluid" (click)="open(i)">
+        </div>
       </div>
     </div>
   </div>

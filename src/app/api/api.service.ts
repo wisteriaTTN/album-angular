@@ -21,4 +21,8 @@ export class ApiService {
   getAlbumById(id: string) {
     return this.Albums.find((self) => self.id === id);
   }
+
+  processFile(imageInput: any) {
+    return this.helper.processFile(imageInput);
+  }
 }
