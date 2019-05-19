@@ -3,6 +3,7 @@ import { ApiService } from 'src/app/api/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Album } from 'src/app/models/album';
 import { Lightbox } from 'ngx-lightbox';
+import { Photo } from 'src/app/models/photo';
 
 @Component({
   selector: 'app-album-detail',
@@ -24,7 +25,16 @@ export class AlbumDetailComponent implements OnInit {
   }
 
   addPhoto(image: any) {
-    this.api.processFile(image);
+    const file: File = image.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (event: any) => {
+
+      console.log(event.target.result);
+      this.album = this.api.uploadPhoto(new Photo(file.name, file.name, event.target.result), this.album.id)
+    });
+
+    reader.readAsDataURL(file);
   }
 
 }

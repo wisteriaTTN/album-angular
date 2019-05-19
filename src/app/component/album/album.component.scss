@@ -1,16 +1,1 @@
-.album {
-    &-item {
-        box-sizing: border-box;
-        text-align: center;
-        padding: 1rem;
-        cursor: pointer;
-        border: 1px solid rgba(0,0,0,.2);
-        border-radius: 5px;
-        &:hover {
-            box-shadow: 0 0 20px rgba(0,0,0,.1);
-        }
-    }
-    &-container {
 
-    }
-}

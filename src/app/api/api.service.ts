@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { helper } from './helper';
 import { Album } from '../models/album';
 import { of } from 'rxjs';
+import { Photo } from '../models/photo';
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +20,14 @@ export class ApiService {
   }
 
   getAlbumById(id: string) {
-    return this.Albums.find((self) => self.id === id);
+    let temp = this.Albums.find((self) => self.id === id);
+    return temp;
   }
 
-  processFile(imageInput: any) {
-    return this.helper.processFile(imageInput);
+  uploadPhoto(image: Photo, albumId: string){
+    let temp = this.Albums.find((self) => self.id === albumId);
+    temp.photos.push(image);
+    return temp;
   }
+
 }

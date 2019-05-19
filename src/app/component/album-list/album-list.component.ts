@@ -16,4 +16,8 @@ export class AlbumListComponent implements OnInit {
     this.AlbumsList = this.api.getAlbumList();
   }
 
+  addAlbum() {
+    const albumId = this.AlbumsList.length;
+    return this.AlbumsList.push(new Album());
+  }
 }

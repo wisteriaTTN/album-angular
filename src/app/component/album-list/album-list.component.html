@@ -4,6 +4,9 @@
   </div>
   <div class="col-md-10">
     <div class="album-list row">
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <i class="fas fa-plus" (click)="addAlbum()"></i>
+      </div>
       <div class="col-md-3" *ngFor="let album of AlbumsList">
         <app-album [album]="album"></app-album>
       </div>
