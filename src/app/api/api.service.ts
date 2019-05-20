@@ -28,5 +28,4 @@ export class ApiService {
     temp.photos.push(image);
     return temp;
   }
-
 }

@@ -19,7 +19,7 @@ export class AlbumListComponent implements OnInit {
       imageAlbum: ''
     });
   }
-  
+
   AlbumsList: Album[] = [];
   constructor(private api : ApiService, private formBuilder: FormBuilder) {
     this.createForm();
