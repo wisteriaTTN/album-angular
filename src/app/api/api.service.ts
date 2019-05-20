@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { helper } from './helper';
 import { Album } from '../models/album';
-import { of } from 'rxjs';
 import { Photo } from '../models/photo';
 
 @Injectable({
@@ -12,7 +11,7 @@ export class ApiService {
   Albums: Album[] = [];
 
   constructor(private helper: helper) {
-    this.Albums = this.helper.generateAlbumList(30);
+    this.Albums = this.helper.generateAlbumList(10);
    }
 
   getAlbumList(count: number = 10) {

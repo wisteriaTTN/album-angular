@@ -8,6 +8,7 @@ import { AlbumListComponent } from './component/album-list/album-list.component'
 import { AlbumComponent } from './component/album/album.component';
 import { AlbumDetailComponent } from './component/album-detail/album-detail.component';
 import { LightboxModule } from 'ngx-lightbox';
+import { FormsModule, ReactiveFormsModule  }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { LightboxModule } from 'ngx-lightbox';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LightboxModule
+    LightboxModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

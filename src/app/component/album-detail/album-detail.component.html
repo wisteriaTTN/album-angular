@@ -6,10 +6,9 @@
     <div class="photo-list row">
       <div class="col-md-3">
         <div class="photo-image">
-            <input #imageInput
-            type="file"
-            accept="image/*"
-            (change)="addPhoto(imageInput)">
+            <div class="form-group">
+              <input #imageInput type="file" class="form-control-file" accept="image/*" id="imagePhoto" (change)="addPhoto(imageInput)">
+            </div>
             <i class="fas fa-plus"></i>
         </div>
       </div>
